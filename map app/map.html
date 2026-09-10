@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>地図 | 天白区観光ガイド</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="map">
+  <header class="topbar">
+    <div class="brand-wrap">
+      <!-- <div class="brand-mark">T</div> -->
+      <div>
+        <p class="brand-sub">NAGOYA LOCAL GUIDE</p>
+        <h1>天白区観光ガイド</h1>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="./index.html">トップ</a>
+      <a href="./map.html" class="active">地図</a>
+    </nav>
+  </header>
+
+  <main class="map-page">
+    <section class="map-layout">
+      <aside class="map-sidebar">
+        <h2>スポット一覧</h2>
+        <div id="mapSpotList" class="map-spot-list"></div>
+      </aside>
+
+      <div class="map-panel">
+        <div id="map"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="./app.js" defer></script>
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYmabVNXixmAyKE4TnxZIqOh5Cf7oDLyA&callback=initMap&libraries=marker&v=beta">
+  </script>
+</body>
+</html>

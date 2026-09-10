@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>スポット詳細 | 天白区観光ガイド</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="detail">
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-mark">T</div>
+      <div>
+        <p class="brand-sub">NAGOYA LOCAL GUIDE</p>
+        <h1>天白区観光ガイド</h1>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="./index.html">トップ</a>
+      <a href="./map.html">地図</a>
+    </nav>
+  </header>
+
+  <main class="detail-page">
+    <section class="detail-hero" id="detailHero"></section>
+
+    <section class="detail-content">
+      <div class="detail-card">
+        <div class="detail-header">
+          <p class="eyebrow">スポット詳細</p>
+          <h2 id="detailTitle">読み込み中...</h2>
+        </div>
+
+        <div class="detail-meta" id="detailMeta"></div>
+
+        <p id="detailDescription" class="detail-description"></p>
+
+        <div class="detail-actions">
+          <a href="./map.html" class="secondary-btn">地図で確認</a>
+          <a href="./index.html" class="ghost-btn">一覧へ戻る</a>
+        </div>
+      </div>
+
+      <div class="detail-map-card">
+        <h3>アクセスマップ</h3>
+        <div id="detailMap" class="detail-map"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="./app.js" defer></script>
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYmabVNXixmAyKE4TnxZIqOh5Cf7oDLyA&callback=initMap&libraries=marker&v=beta">
+  </script>
+</body>
+</html>

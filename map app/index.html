@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>天白区観光ガイド</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page="home">
+  <header class="topbar">
+    <div class="brand-wrap">
+      <!-- <div class="brand-mark">T</div> -->
+      <div>
+        <p class="brand-sub">NAGOYA LOCAL GUIDE</p>
+        <h1>天白区観光ガイド</h1>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="./index.html" class="active">トップ</a>
+      <a href="./map.html">地図</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">自然 × 町歩き × ひと時の休息</p>
+        <h2>天白区のおすすめスポットを探す</h2>
+        <p>
+          ここでは、天白区の自然、食べ物、散歩スポットをまとめて紹介します。
+          旅先のような気分で、自分に合う場所を見つけてください。
+        </p>
+      </div>
+      <div class="hero-card">
+        <p>今すぐ人気スポットを見る</p>
+        <a href="./map.html" class="primary-btn">地図で見る</a>
+      </div>
+    </section>
+
+    <section class="search-box">
+      <label for="searchInput">スポットを検索</label>
+      <input id="searchInput" type="text" placeholder="例: 公園 / カフェ / 自然" />
+    </section>
+
+    <section id="accordion" class="accordion">
+      <h3>自然・散歩</h3>
+      <div>
+        <div id="spotList"></div>
+      </div>
+
+      <h3>グルメ・飲み屋</h3>
+      <div>
+        <p class="accordion-note">地域の食文化と落ち着いた時間を楽しめる場所です。</p>
+      </div>
+
+      <h3>町歩き・体験</h3>
+      <div>
+        <p class="accordion-note">天白区の暮らしや雰囲気を感じる散策コースです。</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>

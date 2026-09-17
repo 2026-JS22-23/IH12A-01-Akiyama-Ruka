@@ -1,0 +1,59 @@
+/**
+ * 日本語
+ * CSSカスタムプロパティ
+ */
+:root {
+  color: #252525;
+  background: #f4f3ef;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Yu Gothic', sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+.app-shell { min-height: 100vh; padding: 3rem 1rem; }
+.todo-page { width: min(100%, 640px); margin: 0 auto; }
+.page-header { padding-bottom: 1.25rem; }
+.eyebrow { margin: 0 0 .6rem; color: #777; font-size: .75rem; }
+.eyebrow span { display: none; }
+h1 { margin: 0; font-size: 2.15rem; font-weight: 700; letter-spacing: 0; line-height: 1.35; }
+h1 span { color: #d15b42; }
+.intro { margin: .35rem 0 0; color: #777; font-size: .9rem; }
+.add-form { display: flex; gap: .6rem; margin: 1.7rem 0 1.5rem; }
+.add-form input { flex: 1; min-width: 0; border: 1px solid #ccc; border-radius: 2px; padding: .7rem .8rem; outline: 0; background: #fff; color: inherit; font-size: .95rem; }
+.add-form input:focus { border-color: #d15b42; }
+.add-form button { border: 0; border-radius: 2px; padding: 0 1rem; background: #d15b42; color: #fff; font-size: .9rem; }
+.add-form button span { margin-left: .25rem; }
+.toolbar, .summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.toolbar { border-top: 1px solid #d7d5d0; border-bottom: 1px solid #d7d5d0; padding: .7rem 0; }
+.filters { display: flex; gap: .25rem; }
+.filters button, .text-button { border: 0; padding: .35rem .5rem; background: transparent; color: #777; font-size: .82rem; }
+.filters button.is-selected { color: #252525; text-decoration: underline; text-decoration-color: #d15b42; text-underline-offset: .35rem; }
+.date-label, .page-footer { color: #999; font-size: .7rem; }
+.todo-list { margin: 0; padding: 0; list-style: none; }
+.todo-item { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #deddd8; padding: 1rem 0; }
+.todo-label { display: flex; align-items: center; gap: .75rem; min-width: 0; font-size: .98rem; cursor: pointer; }
+.todo-label > span:last-child { overflow-wrap: anywhere; }
+.todo-label input { position: absolute; opacity: 0; pointer-events: none; }
+.checkmark { display: grid; flex: 0 0 1.2rem; place-items: center; width: 1.2rem; height: 1.2rem; border: 1px solid #aaa8a1; color: transparent; font-family: Arial, sans-serif; font-size: .75rem; }
+.todo-item.is-completed .checkmark { border-color: #d15b42; background: #d15b42; color: #fff; }
+.todo-item.is-completed .todo-label > span:last-child { color: #999; text-decoration: line-through; text-decoration-thickness: 1px; }
+.delete-button { border: 0; padding: .25rem .4rem; background: transparent; color: #aaa8a1; font-family: Arial, sans-serif; font-size: 1.2rem; line-height: 1; }
+.delete-button:hover { color: #d15b42; }
+.empty-state { padding: 2.5rem 0; color: #777; text-align: center; }
+.summary { padding: 1rem 0 2.25rem; color: #777; font-size: .8rem; }
+.summary p { margin: 0; }
+.summary strong { color: #252525; font-size: .95rem; }
+.text-button { color: #d15b42; }
+.page-footer { text-align: right; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 560px) {
+  .app-shell { padding: 2rem 1rem; }
+  .toolbar { align-items: flex-start; flex-direction: column; }
+  .date-label { align-self: flex-end; }
+  .summary { align-items: flex-start; flex-direction: column; gap: .6rem; }
+}

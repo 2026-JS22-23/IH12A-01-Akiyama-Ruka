@@ -5,7 +5,7 @@ const initialTodos = [
   { id: 2, text: 'TODO をひとつ追加する', completed: false },
   { id: 3, text: 'コードを保存して画面を確認する', completed: false },
 ];
-
+// 9/17部分
 // TODO 1件分を表示する部品
 function TodoItem({ todo, onToggle, onDelete }) {
   return (

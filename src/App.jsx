@@ -26,6 +26,19 @@ function TodoItem({ todo, onToggle, onDelete }) {
   );
 }
 
+// 9/28
+function TodoItem({ text }) {
+  return <li>{text}</li>;
+}
+export default function App() {
+  const items = ["牛乳を買う","レポート提出","Reactの復習"];
+  return (
+  <ul>
+    {items.map((item, index) => <TodoItem key={index} text={item} />)}
+  </ul>
+  );
+}
+
 // 残り件数と完了済み削除ボタンを表示する部品
 function TodoSummary({ remaining, total, onClearCompleted }) {
   return (
